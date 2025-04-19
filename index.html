@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Simulation with Joe Stam's Solver</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: left;
+            font-family: sans-serif;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        #toggle-container {
+            position: static;
+            margin-left: 20px;
+            margin-top: 10px;
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            z-index: 10;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fluid Simulation with Joe Stam's Solver</h1>
+    <div style="margin-left: 20px; margin-top: 0; font-style: italic; font-family: sans-serif; color: #333;">Code cowritten with GitHub Copilot using GPT-4.1. Paul Fishwick, 2025</div>
+    <div id="toggle-container">
+        <label for="colorToggle">Color Mode</label>
+        <input type="checkbox" id="colorToggle">
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
