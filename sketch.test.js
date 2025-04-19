@@ -1,4 +1,4 @@
-const { IX, add_source, lin_solve } = require('./sketch');
+const { IX, add_source, lin_solve, set_bnd } = require('./sketch');
 
 describe('Stable Fluids Core Functions', () => {
   test('IX maps 2D indices to 1D array index correctly', () => {
@@ -23,7 +23,9 @@ describe('Stable Fluids Core Functions', () => {
     const size = (N + 2) * (N + 2);
     let x = new Array(size).fill(0);
     let x0 = new Array(size).fill(1);
+    set_bnd(N, 0, x); // Set boundary conditions before solving
     lin_solve(N, 0, x, x0, 1, 4);
+    set_bnd(N, 0, x); // Set boundary conditions after solving
     // The solution should be stable and not NaN or Infinity
     for (let i = 0; i < size; i++) {
       expect(Number.isFinite(x[i])).toBe(true);
