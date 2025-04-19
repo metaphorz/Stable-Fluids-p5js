@@ -219,3 +219,18 @@ function project(N, u, v, p, div) {
     set_bnd(N, 1, u);
     set_bnd(N, 2, v);
 }
+
+// Export core functions for unit testing
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        IX,
+        add_source,
+        lin_solve,
+        diffuse,
+        advect,
+        set_bnd,
+        project,
+        dens_step,
+        vel_step
+    };
+}
